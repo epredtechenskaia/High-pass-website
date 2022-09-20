@@ -41,6 +41,28 @@ body {
   align-items: center;
 }
 
+.header__burger {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+.header__close-menu {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+.header__phone {
+  display: none;
+}
+
 .header__container {
   margin: 0 auto;
   width: 1290px;
@@ -59,6 +81,7 @@ body {
 
 .header__logo-link {
   display: block;
+  outline: none;
 }
 
 .header__list {
@@ -98,6 +121,7 @@ body {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  outline: none;
 }
 
 .header__search-btn {
@@ -120,6 +144,7 @@ body {
   font-size: 14px;
   line-height: 18px;
   width: 169px;
+  transform: border-color 0.3s ease-in-out;
 }
 
 .header__search-input-two::-moz-placeholder {
@@ -132,6 +157,10 @@ body {
 
 .header__search-input-two::placeholder {
   color: #FFFFFF;
+}
+
+.header__search-input-two:hover {
+  border-color: #CE4307;
 }
 
 .header__search-input-two::-webkit-search-cancel-button {
@@ -152,6 +181,7 @@ body {
 .search--open {
   visibility: visible;
   transform: none;
+  background-color: #202020;
 }
 
 .btn--hidden {
@@ -161,6 +191,20 @@ body {
 
 .header__search-form-two {
   display: flex;
+}
+
+.header__phone-img {
+  margin-right: 4px;
+}
+
+.header__number {
+  color: #FF6E30;
+  font-family: "TT Firs Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  text-decoration: none;
 }
 
 .promo {
@@ -183,7 +227,7 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   padding-left: 58px;
-  background-image: url(images/promo-1-1920.jpg);
+  background-image: url(../images/promo-1-1920.jpg);
   max-height: 630px;
   max-width: 630px;
   color: #FFFFFF;
@@ -389,7 +433,7 @@ body {
   transition-timing-function: ease-in-out;
 }
 
-.projcts {
+.projects {
   padding-top: 68px;
   padding-bottom: 68px;
 }
@@ -417,7 +461,7 @@ body {
   gap: 30px 30px;
 }
 
-.project__top {
+.projects__top {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1;
@@ -615,6 +659,10 @@ body {
   max-width: 850px;
 }
 
+#map {
+  height: 460px;
+}
+
 [class*=ground-pane] {
   filter: grayscale(1);
 }
@@ -787,6 +835,7 @@ body {
   font-size: 16px;
   line-height: 21px;
   text-decoration: none;
+  outline: none;
 }
 
 .contacts__close {
@@ -797,7 +846,7 @@ body {
   height: 20px;
 }
 
-.contscts__close-btn {
+.contacts__close-btn {
   padding: 0;
   margin: 0;
   border: none;
@@ -823,6 +872,7 @@ body {
 
 .footer__logo {
   margin-bottom: 6px;
+  outline: none;
 }
 
 .footer__left {
@@ -863,6 +913,11 @@ body {
 .footer__social {
   width: 30px;
   height: 30px;
+}
+
+.footer__logo {
+  width: 190px;
+  height: 31px;
 }
 
 .footer__quote {
@@ -1023,4 +1078,8 @@ body {
 
 .contacts__btn:active {
   background-color: #CE4307;
+}
+
+.contacts__adress-wrapper--close {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

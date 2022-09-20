@@ -35,7 +35,7 @@ const styles = () => {
             level: 2,
         })))
         .pipe(gulpif(argv.production, sourcemaps.write())) // перед тем как сложить в файл запишет наши sourcemaps
-        .pipe(dest('dist')) // положи этот файл ...
+        .pipe(dest('dist/styles')) // положи этот файл ...
         .pipe(browserSync.stream()) //чтобы передавалось в browserSync
 }
 

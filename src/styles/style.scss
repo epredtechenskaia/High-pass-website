@@ -118,14 +118,26 @@ body {
     height: 100vh;
     background-color: $bacgroundMain;
     outline: 0;
-    // grid-template-areas: "header header" "aside main" "footer footer";
 }
 
 .header {
-    // grid-area: header;
     background-color: $black;
     height: 80px;
     align-items: center;
+}
+
+.header__burger {
+    @include btnReset();
+    display: none;
+}
+
+.header__close-menu {
+    @include btnReset();
+    display: none;
+}
+
+.header__phone {
+    display: none;
 }
 
 .header__container {
@@ -145,7 +157,8 @@ body {
 }
 
 .header__logo-link {
-    display: block
+    display: block;
+    outline: none;
 }
 
 .header__list {
@@ -173,6 +186,7 @@ body {
 
 .header__search-btn-one {
     @include btnReset();
+    outline: none;
 }
 
 .header__search-btn {
@@ -191,10 +205,15 @@ body {
     font-size: 14px;
     line-height: 18px;
     width: 169px;
+    transform: border-color 0.3s ease-in-out;
 }
 
 .header__search-input-two::placeholder {
     color: $white;
+}
+
+.header__search-input-two:hover {
+    border-color: $orangeActive;
 }
 
 .header__search-input-two::-webkit-search-cancel-button {
@@ -215,6 +234,7 @@ body {
 .search--open {
     visibility: visible;
     transform: none;
+    background-color: #202020;
 }
 
 .btn--hidden {
@@ -224,6 +244,20 @@ body {
 
 .header__search-form-two {
     display: flex;
+}
+
+.header__phone-img {
+    margin-right: 4px;
+}
+
+.header__number {
+    color: $orange;
+    font-family: 'TT Firs Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    text-decoration: none;
 }
 
 // PROMO
@@ -247,8 +281,7 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     padding-left: 58px;
-    // padding-bottom: 60px;
-    background-image: url(images/promo-1-1920.jpg);
+    background-image: url(../images/promo-1-1920.jpg);
     max-height: 630px;
     max-width: 630px;
     color: $white;
@@ -290,10 +323,6 @@ body {
     grid-area: photo3;
 }
 
-// .promo__photo-big {
-//     grid-column: 1 / 3;
-//     grid-row: 1 / 3;
-// }
 .promo__photo {
     width: 100%;
     height: 100%;
@@ -429,8 +458,8 @@ body {
     transition-timing-function: ease-in-out;
 }
 
-//projcts 
-.projcts {
+//projects 
+.projects {
     padding-top: 68px;
     padding-bottom: 68px;
 }
@@ -451,7 +480,7 @@ body {
     gap: 30px 30px;
 }
 
-.project__top {
+.projects__top {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1;
@@ -636,6 +665,10 @@ body {
     max-width: 850px;
 }
 
+#map {
+    height: 460px;
+}
+
 [class*="ground-pane"] {
     filter: grayscale(1);
 }
@@ -781,6 +814,7 @@ body {
     font-size: 16px;
     line-height: 21px;
     text-decoration: none;
+    outline: none;
 }
 
 .contacts__close {
@@ -791,7 +825,7 @@ body {
     height: 20px;
 }
 
-.contscts__close-btn {
+.contacts__close-btn {
     @include btnReset();
 }
 
@@ -806,7 +840,6 @@ body {
     padding-top: 20px;
     padding-bottom: 26px;
     display: grid;
-    // grid-template-columns: 239px 487px 161px;
     grid-template-columns: 23.5% 43% 161px;
     grid-template-rows: 1fr;
     justify-content: space-between;
@@ -815,6 +848,7 @@ body {
 
 .footer__logo {
     margin-bottom: 6px;
+    outline: none;
 }
 
 .footer__left {
@@ -855,6 +889,11 @@ body {
 .footer__social {
     width: 30px;
     height: 30px;
+}
+
+.footer__logo {
+    width: 190px;
+    height: 31px;
 }
 
 .footer__quote {
@@ -992,4 +1031,8 @@ body {
 
 .contacts__btn:active {
     background-color: $orangeActive;
+}
+
+.contacts__adress-wrapper--close {
+    display: none;
 }
